@@ -12,6 +12,7 @@ docData.output.innerHTML = "<p>It's empty!</p>"
 docData.console.innerHTML = "<p>It's empty!</p>"
 docData.sendConsole.value = ''
 docData.ProjectName.value = ''
+consoleLang = ""
 theme = localStorage.getItem('theme')
 if (!theme) {
   theme = 'light'
@@ -46,7 +47,8 @@ function newTheme() {
   updateTheme(themes[theme])
 }
 function SendToConsole() {
-  docData.console.innerHTML = `${docData.console.innerHTML}<p>your: ${docData.sendConsole.value}</p>`
+  docData.console.innerHTML = `${consoleLang}<p>your: ${docData.sendConsole.value}</p>`
+  consoleLang = `${consoleLang}<p>your: ${docData.sendConsole.value}</p>`
 }
 function GetTypes(znach) {
   TypesGet.i = znach.type
