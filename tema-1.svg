@@ -1,0 +1,14 @@
+<svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    :root {
+      --bg-color: #ffffff;   /* фон для светлой темы */
+      --border-color: #000000; /* обводка для светлой темы */
+      --fill-color: transparent; /* заливка */
+      --bg-color2: #000000;   /* фон для тёмной темы */
+      --border-color2: #ffffff; /* обводка для тёмной темы */
+    }
+
+  </style>
+  <rect width="20" height="20" fill="var(--bg-color)" />
+  <rect x="1" y="1" width="18" height="18" fill="var(--fill-color)" stroke="var(--border-color)" stroke-width="2" />
+</svg>
