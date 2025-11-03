@@ -1,0 +1,2 @@
+# DeytelengScript
+Mini programming lang
