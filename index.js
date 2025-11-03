@@ -5,11 +5,12 @@ docData.css = document.getElementById('css')
 docData.theme = document.getElementById('theme')
 docData.console = document.getElementById('console')
 docData.sendConsole = document.getElementById('sendConsole')
-docData.ProjectName = document.getElementById('sendConsole')
+docData.ProjectName = document.getElementById('ProjectName')
 docData.input.value = ''
 docData.output.innerHTML = "<p>It's empty!</p>"
 docData.console.innerHTML = "<p>It's empty!</p>"
 docData.sendConsole.value = ''
+docData.ProjectName.value = ''
 theme = localStorage.getItem('theme')
 if (!theme) {
   theme = 'light'
