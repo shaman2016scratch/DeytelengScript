@@ -46,7 +46,7 @@ function newTheme() {
   updateTheme(themes[theme])
 }
 function SendToConsole() {
-  docData.console.innerHTML = `${docData.console}<p>your: ${docData.sendConsole.value}</p>`
+  docData.console.innerHTML = `${docData.console.innerHTML}<p>your: ${docData.sendConsole.value}</p>`
 }
 function GetTypes(znach) {
   TypesGet.i = znach.type
