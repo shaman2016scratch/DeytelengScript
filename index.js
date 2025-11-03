@@ -49,7 +49,10 @@ function newTheme() {
 function SentToConsole() {
   docData.console.innerHTML = `${docData.console}<p>your: ${docData.sendConsole.value}</p>`
 }
-function GetTypes(znach)
+function GetTypes(znach) {
+  TypesGet.i = znach.type
+  TypesGet.i2 = znach.value
+}
 function Run() {
   code = docData.input.value
   RunnerDeytelengScript = {}
