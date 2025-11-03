@@ -3,6 +3,8 @@ docData.input = document.getElementById('input')
 docData.output = document.getElementById('output')
 docData.css = document.getElementById('css')
 docData.theme = document.getElementById('theme')
+docData.console = document.getElementById('console')
+docData.sendConsole = document.getElementById('sendConsole')
 theme = localStorage.getItem('theme')
 if (!theme) {
   theme = 'light'
@@ -23,8 +25,8 @@ themeStyle = {
   "2": "/DeytelengScript/main2.css",
 }
 function updateTheme(th) {
-  docData.css = themeStyle[th]
-  docData.theme = themeIcon[th]
+  docData.css.href = themeStyle[th]
+  docData.theme.src = themeIcon[th]
 }
 function newTheme() {
   if (theme === 'light') {
@@ -35,4 +37,7 @@ function newTheme() {
     localStorage.setItem(theme)
   }
   updateTheme(themes[theme])
+}
+function Run() {
+  code = docData.input.value
 }
