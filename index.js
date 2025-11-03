@@ -5,6 +5,10 @@ docData.css = document.getElementById('css')
 docData.theme = document.getElementById('theme')
 docData.console = document.getElementById('console')
 docData.sendConsole = document.getElementById('sendConsole')
+docData.input.value = ''
+docData.output.innerHTML = "<p>It's empty!</p>"
+docData.console.innerHTML = "<p>It's empty!</p>"
+docData.sendConsole.value = ''
 theme = localStorage.getItem('theme')
 if (!theme) {
   theme = 'light'
@@ -37,6 +41,9 @@ function newTheme() {
     localStorage.setItem(theme)
   }
   updateTheme(themes[theme])
+}
+function SentToConsole() {
+  docData.console.innerHTML = `${docData.console}<p>your: ${docData.sendConsole.value}</p>`
 }
 function Run() {
   code = docData.input.value
