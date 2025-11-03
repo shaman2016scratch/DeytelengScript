@@ -1,4 +1,9 @@
 // код DeytelengScript/code DeytelengScript
+const url = new URL(window.location)
+const searchParams = url.searchParams
+if (searchParams.get('lang')) {
+  searchParams.append('lang', 'English')
+}
 docData = {}
 docData.input = document.getElementById('input')
 docData.output = document.getElementById('output')
@@ -7,6 +12,7 @@ docData.theme = document.getElementById('theme')
 docData.console = document.getElementById('console')
 docData.sendConsole = document.getElementById('sendConsole')
 docData.ProjectName = document.getElementById('ProjectName')
+docData.Lang = document.getElementById('Language')
 docData.input.value = ''
 docData.output.innerHTML = "<p>It's empty!</p>"
 docData.console.innerHTML = "<p>Site started!</p>"
