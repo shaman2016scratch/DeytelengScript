@@ -1,7 +1,7 @@
 // код DeytelengScript/code DeytelengScript
 const url = new URL(window.location)
 const searchParams = url.searchParams
-docData = {}
+let docData = {}
 docData.input = document.getElementById('input')
 docData.output = document.getElementById('output')
 docData.css = document.getElementById('css')
@@ -17,30 +17,30 @@ docData.console.innerHTML = "<p>Site started!</p>"
 docData.sendConsole.value = ''
 docData.ProjectName.value = ''
 docData.pocket.value = ''
-consoleLang = "<p>Site started!</p>"
-theme = localStorage.getItem('theme')
+let consoleLang = "<p>Site started!</p>"
+let theme = localStorage.getItem('theme')
 if (!theme) {
   theme = 'light'
   localStorage.setItem('theme', theme)
 }
-apps = localStorage.getItem('apps')
-apps2 = localStorage.getItem('apps2')
+let apps = localStorage.getItem('apps')
+let apps2 = localStorage.getItem('apps2')
 if (!apps) {
   localStorage.setItem('apps', [])
   localStorage.setItem('apps2', {})
   apps = localStorage.getItem('apps')
   apps2 = localStorage.getItem('apps2')
 }
-app = {}
-themes = {
+let app = {}
+let themes = {
   "light": 1,
   "dark": 2,
 }
-themeIcon = {
+let themeIcon = {
   1: "/DeytelengScript/tema-1.svg",
   2: "/DeytelengScript/tema-2.svg",
 }
-themeStyle = {
+let themeStyle = {
   1: "/DeytelengScript/main.css",
   2: "/DeytelengScript/main2.css",
 }
@@ -76,16 +76,8 @@ function GetTypes(znach) {
   TypesGet.i2 = znach.value
 }
 function Run() {
-  code = docData.input.value
-  RunnerDeytelengScript = {}
+  let code = JSON.parse(docData.input.value)
+  let RunnerDeytelengScript = {}
   RunnerDeytelengScript.i = 0
-  RunnerDeytelengScript.i2 = 'true'
-  while (RunnerDeytelengScript.i2) {
-    if (RunnerDeytelengScript.i > code.length) {
-      RunnerDeytelengScript.i2 = 'false'
-    } else {
-      RunnerDeytelengScript.i2 = 'true'
-    }
-    RunnerDeytelengScript.i = RunnerDeytelengScript.i + 1
-  }
+    for(RunnerDeytelengScript.i = 0; RunnerDeytelengScript.i < code.length) {}
 }
