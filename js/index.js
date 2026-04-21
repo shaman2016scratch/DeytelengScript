@@ -37,12 +37,12 @@ let themes = {
   "dark": 2,
 }
 let themeIcon = {
-  1: "/DeytelengScript/tema-1.svg",
-  2: "/DeytelengScript/tema-2.svg",
+  1: "/DeytelengScript/assets/tema-1.svg",
+  2: "/DeytelengScript/assets/tema-2.svg",
 }
 let themeStyle = {
-  1: "/DeytelengScript/main.css",
-  2: "/DeytelengScript/main2.css",
+  1: "/DeytelengScript/css/main.css",
+  2: "/DeytelengScript/css/main2.css",
 }
 function updateTheme(th) {
   docData.css.href = themeStyle[th]
