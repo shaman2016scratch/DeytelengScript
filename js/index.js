@@ -77,8 +77,7 @@ function GetTypes(znach) {
 }
 function Run() {
   let code = JSON.parse(docData.input.value)
-  let RunnerDeytelengScript = {}
-    for(let i = 0; RunnerDeytelengScript.i < code.length) {
+    for(let i = 0; i < code.length; i++) {
       let i2 = code[i]
     }
 }
